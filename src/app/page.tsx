@@ -8,7 +8,7 @@ import WhoCanJoin2 from "@/components/whoCanJoin2";
 import UpcomingEvents from "@/components/upcomingEvent";
 
 export default function Home() {
-  const images = ["@/images/spave6.0.jpg", "@/images/ieeeday2023.jpg"];
+  const images = ["/images/spave6.0.jpg", "/images/ieeeday2023.jpg"];
   return (
     <>
       <div className={"container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8"}>
