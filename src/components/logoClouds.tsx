@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const logos = [
-  "./images/CS-logo.png",
-  "./images/EMBS-logo.png",
-  "./images/IAS-logo.png",
-  "./images/MTTS-logo.png",
-  "./images/WIE-logo.png",
+  "/images/CS-logo.png",
+  "/images/EMBS-logo.png",
+  "/images/IAS-logo.png",
+  "/images/MTTS-logo.png",
+  "/images/WIE-logo.png",
 ];
 
 export default function LogoCloud() {
