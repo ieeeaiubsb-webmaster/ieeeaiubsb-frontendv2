@@ -29,7 +29,7 @@ export default function LogoCloud() {
               </div>
             ))}
             {logos.length > 0 && (
-              <div className="col-span-2 md:col-span-2 lg:col-span-1  flex justify-center mt-8">
+              <div className="col-span-2 md:col-span-2 lg:col-span-1 flex justify-center items-center ">
                 <Image
                   src={logos[logos.length - 1]}
                   alt={`Logo ${logos.length}`}

@@ -6,6 +6,8 @@ import LogoCloud from "@/components/logoClouds";
 import Feature from "@/components/feature";
 import WhoCanJoin2 from "@/components/whoCanJoin2";
 import UpcomingEvents from "@/components/upcomingEvent";
+import RecentEvents from "@/components/recentEvents";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   const images = ["/images/spave6.0.jpg", "/images/ieeeday2023.jpg"];
@@ -31,14 +33,16 @@ export default function Home() {
 
           {/*IEEE AIUB Student Branch*/}
           <Feature />
-
+          {/*Chapters and Aff*/}
           <LogoCloud />
-
-          {/*Who can Join section*/}
-          <WhoCanJoin2 />
-          {/*<WhoCanJoin />*/}
+          {/*What they say*/}
+          <Testimonials />
           {/*Events*/}
           <UpcomingEvents />
+          {/*Recent Events*/}
+          <RecentEvents />
+          {/*Who can Join section*/}
+          <WhoCanJoin2 />
           <div className={"p-4 flex flex-col items-center justify-center"}>
             {/*<span*/}
             {/*  className={*/}
