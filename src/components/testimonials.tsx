@@ -1,19 +1,15 @@
 "use client";
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
 
-interface Slide {
-  imageSrc: string;
-  imageAlt: string;
-  text: string;
-  name: string;
-  title: string;
-}
+import { useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { useInView } from "motion/react";
 
-const slides: Slide[] = [
+// Sample testimonials data
+const testimonials = [
   {
     imageSrc: "/images/abdullahsaki.jpg",
     imageAlt: "image",
@@ -54,67 +50,107 @@ const slides: Slide[] = [
   },
 ];
 
-export default function Testimonials() {
-  return (
-    <>
-      <h1 className="mt-1 text-3xl font-extrabold text-sky-800 md:text-3xl lg:text-4xl sm:tracking-tight text-center">
-        What They Say
-      </h1>
-      <Swiper
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        spaceBetween={30}
-        effect={"fade"}
-        modules={[EffectFade, Autoplay]}
-        className="mySwiper h-auto"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="!h-auto grid place-items-center">
-            <div className="overflow-hidden bg-white h-full">
-              <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-12 lg:px-8 lg:py-20 h-full">
-                <div className="relative lg:flex lg:items-center">
-                  <div className="hidden lg:block lg:flex-shrink-0">
-                    <img
-                      className="h-64 w-64 rounded-full xl:h-80 xl:w-80"
-                      src={slide.imageSrc}
-                      alt={slide.imageAlt}
-                    />
-                  </div>
+export default function TestimonialSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
-                  <div className="relative h-full lg:ml-10">
-                    <blockquote className="h-full">
-                      <div className="text-justify lg:text-base font-medium leading-9 text-gray-500 h-full">
-                        <p>{slide.text}</p>
-                      </div>
-                      <footer className="mt-8">
-                        <div className="flex">
-                          <div className="flex-shrink-0 lg:hidden">
-                            <img
-                              className="h-12 w-12 rounded-full"
-                              src={slide.imageSrc}
-                              alt={slide.imageAlt}
-                            />
-                          </div>
-                          <div className="ml-4 lg:ml-0">
-                            <div className="text-xl font-bold text-gray-800">
-                              {slide.name}
-                            </div>
-                            <div className="text-base font-medium text-amber-600">
-                              {slide.title}
-                            </div>
-                          </div>
-                        </div>
-                      </footer>
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1,
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1,
+    );
+  };
+
+  return (
+    <div className="w-full max-w-4xl mx-auto px-4 py-12 " ref={ref}>
+      <h2 className="text-center text-4xl font-bold text-sky-800 mb-2">
+        What they say
+      </h2>
+      <div className="relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: 100 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className="w-full"
+          >
+            <Card className="border-none shadow-lg">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center text-center space-y-6">
+                  <Avatar className="w-24 h-24 border-4 border-primary/10">
+                    <AvatarImage
+                      src={testimonials[currentIndex].imageSrc}
+                      alt={testimonials[currentIndex].imageAlt}
+                    />
+                    <AvatarFallback>
+                      {testimonials[currentIndex].name.charAt(0)}
+                    </AvatarFallback>
+                  </Avatar>
+
+                  <div className="space-y-4">
+                    <blockquote className="text-base italic text-muted-foreground md:text-lg">
+                      &quot;{testimonials[currentIndex].text}&quot;
                     </blockquote>
+
+                    <div>
+                      <h3 className="text-base font-semibold md:text-lg">
+                        {testimonials[currentIndex].name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonials[currentIndex].title}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="flex justify-center mt-6 space-x-2">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={handlePrevious}
+            className="rounded-full"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            <span className="sr-only">Previous testimonial</span>
+          </Button>
+
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={handleNext}
+            className="rounded-full"
+          >
+            <ChevronRight className="h-4 w-4" />
+            <span className="sr-only">Next testimonial</span>
+          </Button>
+        </div>
+
+        <div className="flex justify-center mt-4">
+          {testimonials.map((_, index) => (
+            <Button
+              key={index}
+              variant="ghost"
+              size="sm"
+              className={`w-2 h-2 p-0 rounded-full mx-1 ${currentIndex === index ? "bg-primary" : "bg-muted"}`}
+              onClick={() => setCurrentIndex(index)}
+            >
+              <span className="sr-only">Go to slide {index + 1}</span>
+            </Button>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

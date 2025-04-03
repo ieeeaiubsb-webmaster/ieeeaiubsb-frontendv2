@@ -27,7 +27,9 @@ const features = [
 
 export default function Feature() {
   return (
-    <div className={`container grid grid-cols-1 w-full md:grid-cols-2 pt-6`}>
+    <div
+      className={`container grid grid-cols-1 w-full md:grid-cols-2 pt-6 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8`}
+    >
       <div className={`grid-cols-1 relative`}>
         <div className="relative">
           <h2 className=" relative text-3xl inset-0 z-10 sm:text-xl md:text-5xl font-bold text-sky-800">

@@ -16,10 +16,12 @@ import Image from "next/image";
 
 export default function RecentEvents() {
   return (
-    <section className="">
-      <div className="container mx-auto">
-        <div className="flex flex-col gap-2 mb-8">
-          <h2 className="text-3xl font-bold text-sky-800">Recent Events</h2>
+    <section className="my-6">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-3xl font-bold text-sky-800 mb-2">
+            Recent Events
+          </h2>
         </div>
 
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">

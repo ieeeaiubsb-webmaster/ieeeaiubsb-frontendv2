@@ -25,7 +25,7 @@ export default function IeeeAiubSbTextArt() {
     <>
       <motion.div
         viewport={{ once: true }} // Render only once
-        className="bg-sky-800 flex items-center justify-center p-4 w-full" //#046799
+        // className="bg-sky-800 flex items-center justify-center p-4 w-full" //#046799
       >
         <motion.svg
           width="250"

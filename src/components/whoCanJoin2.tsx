@@ -4,7 +4,9 @@ import { LineShadowText } from "./magicui/line-shadow-text";
 
 export default function WhoCanJoin2() {
   return (
-    <div className={`grid grid-cols-2`}>
+    <div
+      className={`grid grid-cols-2 mx-auto max-w-5xl px-4 my-6 sm:px-6 lg:px-8 `}
+    >
       <div className={`grid col-span-1`}>
         <p
           className={`text-5xl md:text-6xl lg:text-7xl font-extrabold text-sky-700`}

@@ -8,7 +8,9 @@ import Link from "next/link";
 
 export default function UpcomingEvents() {
   return (
-    <div className={`grid grid-cols-1 w-full md:grid-cols-2 `}>
+    <div
+      className={`grid grid-cols-1 w-full md:grid-cols-2 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+    >
       <div className={`md:col-span-1`}>
         <h2 className={`text-3xl font-bold text-sky-800`}>Upcoming Event</h2>
         <p className={`pt-8`}>Event Description / Speaker Prof</p>
