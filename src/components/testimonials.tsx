@@ -68,7 +68,10 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-12 " ref={ref}>
+    <div
+      className="w-full max-w-4xl mx-auto px-4 py-12 overflow-x-hidden"
+      ref={ref}
+    >
       <h2 className="text-center text-4xl font-bold text-sky-800 mb-2">
         What they say
       </h2>
