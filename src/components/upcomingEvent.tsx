@@ -21,25 +21,25 @@ export default function UpcomingEvents() {
         </Button>
       </div>
       <div className={`md:col-span-1`}>
-        <Card className={`relative overflow-hidden aspect-square`}>
+        <Card className={`relative overflow-hidden`}>
           <CardHeader>
             <div className="flex items-center gap-2 mb-2">
-              <Badge variant="secondary">Cat</Badge>
+              <Badge variant="secondary">Artificial Intelligence</Badge>
               <div className="flex items-center text-sm text-muted-foreground">
                 <CalendarIcon className="mr-1 h-3 w-3" />
-                <span>Date</span>
+                <span>23-March-2025</span>
               </div>
             </div>
-            <CardTitle>Card Title</CardTitle>
+            <CardTitle>AI Driven methods On Agriculture</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="aspect-square overflow-hidden rounded-md bg-muted">
+            <div className="overflow-hidden rounded-md bg-muted">
               <Image
-                src="/"
+                src="/images/UpcomingEvent.jpg"
                 alt="banner"
-                width={100}
-                height={100}
-                className="h-full w-full object-cover transition-all hover:scale-105"
+                width={700}
+                height={400}
+                className="object-contain transition-all hover:scale-105"
               />
             </div>
           </CardContent>
