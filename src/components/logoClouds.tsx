@@ -11,7 +11,7 @@ const logos = [
 export default function LogoCloud() {
   return (
     <div className="py-12 bg-white">
-      <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 md:max-w-7xl">
         <h2 className="text-center text-4xl font-bold text-sky-800 mb-6">
           Chapters and Affinity Groups
         </h2>
@@ -22,7 +22,7 @@ export default function LogoCloud() {
                 <Image
                   src={logo}
                   alt={`Logo ${index + 1}`}
-                  width={120}
+                  width={180}
                   height={60}
                   className="object-contain"
                 />
