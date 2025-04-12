@@ -15,10 +15,14 @@ export function Faq() {
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq) => (
           <AccordionItem value={faq.question} key={faq.question}>
-            <AccordionTrigger className={`text-justify tracking-wide`}>
+            <AccordionTrigger
+              className={`text-justify tracking-wide md:text-lg`}
+            >
               {faq.question}
             </AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
+            <AccordionContent className={`text-justify md:text-base`}>
+              {faq.answer}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
