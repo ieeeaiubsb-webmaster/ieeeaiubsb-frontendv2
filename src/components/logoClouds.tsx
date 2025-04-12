@@ -37,6 +37,7 @@ export default function LogoCloud() {
                   height={60}
                   className="object-contain "
                 />
+                {/*  test*/}
               </div>
             )}
           </div>
