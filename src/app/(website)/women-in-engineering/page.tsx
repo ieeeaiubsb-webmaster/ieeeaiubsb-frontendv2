@@ -87,7 +87,7 @@ const metrics = [
   { id: 3, stat: '958', emphasis: 'Student Branches', rest: 'have WIE Affinity Groups.' },
 ];
 
-export function Description() {
+ function Description() {
   return (
     <div className="isolate bg-white">
    
@@ -158,7 +158,7 @@ export function Description() {
     </div>
   );
 }
-export function Strive() {
+ function Strive() {
   return (
     <section className="py-16 bg-fuchsia-100 " data-aos="zoom-in">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
@@ -200,7 +200,7 @@ export function Strive() {
   );
 }
 
-export function Publications() {
+ function Publications() {
   return (
     <section className="py-16 px-6 bg-white" data-aos="fade-up"
     data-aos-delay="200"
@@ -241,7 +241,7 @@ export function Publications() {
   );
 }
 
-export function Metrics() {
+ function Metrics() {
   return (
     <section className="bg-fuchsia-900 text-white py-20 px-6 " >
       <div className="max-w-6xl mx-auto"  data-aos="zoom-in-left">
@@ -279,7 +279,7 @@ export function Metrics() {
     </section>
   );
 }
-export function Benefits() {
+ function Benefits() {
   return (
     <section className="py-16 px-6 bg-white" >
       <div className="max-w-6xl mx-auto" data-aos="fade-up">
@@ -294,7 +294,7 @@ export function Benefits() {
   )
 }
 
-export function JoinUs() {
+ function JoinUs() {
   return (
 
     <div className="bg-gradient-to-r from-fuchsia-600 to-fuchsia-900">
@@ -321,7 +321,7 @@ export function JoinUs() {
   );
 }
 
-export function CardHoverEffectDemo() {
+ function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
       <HoverEffect items={benefits} />

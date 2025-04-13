@@ -197,7 +197,13 @@ function JoinUs() {
     </div>
   );
 }
-
+function CardHoverEffectDemo() {
+  return (
+    <div className="max-w-5xl mx-auto px-8">
+      <HoverEffect items={benefits} />
+    </div>
+  );
+}
 
 function Benefits() {
   return (
@@ -228,13 +234,7 @@ function Benefits() {
   );
 }
 
-export function CardHoverEffectDemo() {
-  return (
-    <div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={benefits} />
-    </div>
-  );
-}
+ 
 
 
 export default function MttSPage() {
