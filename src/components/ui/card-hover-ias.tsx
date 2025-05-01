@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
-import React, { SVGProps } from "react";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion"; // corrected import
+import React, { SVGProps, useState } from "react";
 
 export const HoverEffect = ({
   items,
@@ -17,35 +16,30 @@ export const HoverEffect = ({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10", className)}>
+    <div className={cn("grid grid-cols-1 sm:grid-cols-2 gap-6 py-10", className)}>
       {items.map((item, idx) => (
         <div
           key={item.name}
-          className="relative group block p-2 h-full w-full"
+          className="relative group"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-green-600 block rounded-3xl"
+                className="absolute inset-0 bg-green-600 rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
+                animate={{ opacity: 1, transition: { duration: 0.15 } }}
+                exit={{ opacity: 0, transition: { duration: 0.15, delay: 0.2 } }}
               />
             )}
           </AnimatePresence>
-          <Card className="flex flex-col justify-between h-full">
+
+          <Card className="flex flex-col justify-between h-full relative z-10">
             <div>
-              <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                <item.icon className="h-8 w-8 text-white " aria-hidden="true" />
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-green-600">
+                <item.icon className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <CardTitle>{item.name}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
@@ -53,7 +47,7 @@ export const HoverEffect = ({
             <div className="mt-6">
               <a
                 href="https://mtt.org/"
-                className="text-green-600 font-bold  inline-block"
+                className="text-green-600 font-bold inline-block"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -61,14 +55,11 @@ export const HoverEffect = ({
               </a>
             </div>
           </Card>
-
-
         </div>
       ))}
     </div>
   );
 };
-
 
 export const Card = ({
   className,
@@ -80,17 +71,14 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white border border-transparent group-hover:border-green-600 relative z-20 transition-colors duration-300",
+        "rounded-2xl p-6 bg-white border border-transparent group-hover:border-green-600 transition-colors duration-300 shadow-sm",
         className
       )}
     >
-      <div className="relative z-50 h-full">
-        <div className="p-4 flex flex-col justify-between h-full">{children}</div>
-      </div>
+      {children}
     </div>
   );
 };
-
 
 export const CardTitle = ({
   className,
@@ -102,7 +90,7 @@ export const CardTitle = ({
   return (
     <h4
       className={cn(
-        "text-gray-900 font-bold tracking-wide mt-4 text-lg transition-colors duration-300",
+        "text-gray-900 font-semibold text-lg sm:text-xl tracking-tight",
         className
       )}
     >
@@ -121,7 +109,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-4 text-gray-600 tracking-wide text-justify leading-relaxed text-sm transition-colors duration-300",
+        "mt-4 text-gray-600 leading-relaxed text-sm sm:text-base",
         className
       )}
     >

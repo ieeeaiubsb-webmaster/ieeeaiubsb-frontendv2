@@ -108,14 +108,20 @@ function Publication() {
       <div className="relative group w-full max-w-5xl mx-auto">
         <div className="absolute inset-0 transform skew-y-[-5deg] bg-gradient-to-tr from-green-400 via-green-100 to-green-900 rounded-3xl shadow-2xl group-hover:scale-105 transition duration-500 ease-in-out z-0" />
         <div className="relative z-10 p-2 bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div className="relative w-full h-0 pb =rounded-xl overflow-hidden">
-            <Image src="/images/publications-ias.jpg" alt="Publications" fill className="object-cover border-6 border-white shadow-lg scale-[1.02] transition duration-500 ease-in-out group-hover:scale-[1.03]" />
+          <div className="relative w-full h-0 pb-[66.66%] rounded-xl overflow-hidden">
+            <Image
+              src="/images/publications-ias.jpg"
+              alt="Publications"
+              fill
+              className="object-cover border-6 border-white shadow-lg scale-[1.02] transition duration-500 ease-in-out group-hover:scale-[1.03]"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 }
+
 
 function JoinUs() {
   return (
