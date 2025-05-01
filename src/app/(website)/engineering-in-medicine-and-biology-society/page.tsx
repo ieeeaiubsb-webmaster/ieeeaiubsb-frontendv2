@@ -30,7 +30,6 @@ const benefits = [
   },
 ];
 
-
 function Description() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-20" data-aos="fade-up">
@@ -43,7 +42,7 @@ function Description() {
         </p>
       </div>
       <div className="p-8 flex flex-col items-center justify-center text-center" data-aos="zoom-in">
-        <img src="images/EMBS-logo.png" alt="IEEE EMBS Logo" className="w-auto h-auto max-w-full" />
+        <Image src="/images/EMBS-logo.png" alt="IEEE EMBS Logo" width={300} height={200} className="w-auto h-auto max-w-full" />
         
         <div className="flex gap-10">
           <Link href={"/membership"}>

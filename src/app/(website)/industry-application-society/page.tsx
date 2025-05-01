@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -47,7 +46,7 @@ function Description() {
         </p>
       </div>
       <div className="p-8 flex flex-col items-center justify-center text-center" data-aos="zoom-in">
-        <img src="images/IAS-logo.png" alt="IEEE IAS Logo" className="w-auto h-auto max-w-full mb-9" />
+        <Image src="/images/IAS-logo.png" alt="IEEE IAS Logo" width={300} height={200} className="w-auto h-auto max-w-full mb-9" />
         <div className="flex gap-10">
           <Link href={"/membership"}>
             <Button className="mt-4 w-28 bg-green-600 text-white hover:bg-green-900 cursor-pointer">Join Us</Button>
@@ -109,7 +108,7 @@ function Publication() {
       <div className="relative group w-full max-w-5xl mx-auto">
         <div className="absolute inset-0 transform skew-y-[-5deg] bg-gradient-to-tr from-green-400 via-green-100 to-green-900 rounded-3xl shadow-2xl group-hover:scale-105 transition duration-500 ease-in-out z-0" />
         <div className="relative z-10 p-2 bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div className="relative w-full h-0 pb-[66.66%] rounded-xl overflow-hidden">
+          <div className="relative w-full h-0 pb =rounded-xl overflow-hidden">
             <Image src="/images/publications-ias.jpg" alt="Publications" fill className="object-cover border-6 border-white shadow-lg scale-[1.02] transition duration-500 ease-in-out group-hover:scale-[1.03]" />
           </div>
         </div>
@@ -151,9 +150,9 @@ function Education() {
 
       <div className="w-full md:w-1/2 flex flex-col justify-center pt-10">
           <h2 className="text-2xl font-semibold  text-green-800 mb-8 leading-snug">
-  Everything You Need:           
-  <h1 className="text-5xl md:text-8xl font-bold bg-gradient-to-r from-green-600 to-green-900 bg-clip-text text-transparent mb-8">Education</h1>
-    </h2>
+        Everything You Need:</h2>      
+        <h1 className="text-5xl md:text-8xl font-bold bg-gradient-to-r from-green-600 to-green-900 bg-clip-text text-transparent mb-8">Education</h1>
+
     <p className="text-lg text-gray-600 max-w-md">
       The IAS Education Department oversees assessing the educational options available to IAS members, providing a variety of opportunities to stay technically and professionally updated.
     </p>
@@ -168,7 +167,7 @@ function Education() {
             <h3 className="text-xl font-semibold ml-3 text-gray-800">IEEE IAS Expert Webinars</h3>
           </div>
           <p className="text-gray-600">
-          The foremost authorities in their fields who are relevant to the IAS membership will deliver these technical webinars. The series began in the middle of 2015, and you can watch previous webinars whenever it&epos; convenient for you. Future webinars will be available in a live setting where participants can prepare questions in advance to ask the presenter.
+          The foremost authorities in their fields who are relevant to the IAS membership will deliver these technical webinars. The series began in the middle of 2015, and you can watch previous webinars whenever it’s convenient for you. Future webinars will be available in a live setting where participants can prepare questions in advance to ask the presenter.
           </p>
         </div>
 
@@ -192,7 +191,7 @@ function Education() {
             <h3 className="text-xl font-semibold ml-3 text-gray-800">Mentoring Resource</h3>
           </div>
           <p className="text-gray-600">
-          The IAS Magazine&epos; Pathways articles, which show how some IAS young professionals are finding their way to fulfilling careers, can be used as an e-mentoring tool. Perhaps one of these tales can motivate or inspire you on your own professional path. To get a summary of the articles and links to read any of them, kindly click on the link below.
+          The IAS Magazine’s Pathways articles, which show how some IAS young professionals are finding their way to fulfilling careers, can be used as an e-mentoring tool. Perhaps one of these tales can motivate or inspire you on your own professional path. To get a summary of the articles and links to read any of them, kindly click on the link below.
           </p>
         </div>
       </div>

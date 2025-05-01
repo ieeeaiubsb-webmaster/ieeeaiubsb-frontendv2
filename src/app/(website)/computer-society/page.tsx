@@ -35,7 +35,6 @@ const benefits = [
   }
 ];
 
-
 function Description() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-20" data-aos="fade-up">
@@ -48,7 +47,7 @@ function Description() {
         </p>
       </div>
       <div className="p-8 flex flex-col items-center justify-center text-center" data-aos="zoom-in">
-        <img src="images/CS-logo.png" alt="IEEE CS Logo" className="w-auto h-auto max-w-full" />
+        <Image src="/images/CS-logo.png" alt="IEEE CS Logo" width={300} height={200} className="w-auto h-auto max-w-full" />
         <div className="flex gap-10">
           <Link href={"/membership"}>
             <Button className="mt-4 w-28 bg-yellow-500 text-white hover:bg-yellow-700 cursor-pointer">Join Us</Button>
@@ -118,7 +117,6 @@ function Publication() {
   );
 }
 
-
 function Education() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -132,7 +130,7 @@ function Education() {
   Education
 </h1>
           <p className="text-lg text-gray-600 max-w-md">
-            The IEEE CS Education Department provides a wide range of programs, tools, and content to help you grow your computer science knowledge—whether you're a student, educator, or lifelong learner.
+            The IEEE CS Education Department provides a wide range of programs, tools, and content to help you grow your computer science knowledge—whether you&apos;re a student, educator, or lifelong learner.
           </p>
         </div>
 
