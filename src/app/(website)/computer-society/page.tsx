@@ -109,7 +109,7 @@ function Publication() {
         <div className="absolute inset-0 transform skew-y-[-5deg] bg-gradient-to-tr from-yellow-500 via-yellow to-yellow-600 rounded-3xl shadow-2xl group-hover:scale-105 transition duration-500 ease-in-out z-0" />
         <div className="relative z-10 p-2 bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="relative w-full h-0 pb-[66.66%] rounded-xl overflow-hidden">
-            <Image src="/images/publications-cs.jpg" alt="Publications" fill className="object-cover border-6 border-white shadow-lg scale-[1.02] transition duration-500 ease-in-out group-hover:scale-[1.03]" />
+            <Image src="/images/publications-CS.JPG" alt="Publications" fill className="object-cover border-6 border-white shadow-lg scale-[1.02] transition duration-500 ease-in-out group-hover:scale-[1.03]" />
           </div>
         </div>
       </div>
@@ -243,7 +243,7 @@ function Education() {
 
 function JoinUs() {
   return (
-    <div className="bg-gradient-to-r from-yellow-500 to-yellow-800">
+    <div className="bg-gradient-to-r from-orange-700 to-yellow-300">
       <div className="mx-auto max-w-5xl py-16 px-6 text-center sm:py-20 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           <span className="block py-2">Join IEEE today.</span>
