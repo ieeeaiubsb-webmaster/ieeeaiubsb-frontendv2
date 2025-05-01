@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata: Metadata = {
   title: "IEEEAIUBSB",
   description: "Created by IEEE AIUB Student Branch Web Development Team.",
