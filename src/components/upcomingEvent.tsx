@@ -12,11 +12,27 @@ export default function UpcomingEvents() {
       className={`grid grid-cols-1 w-full md:grid-cols-2 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
     >
       <div className={`md:col-span-1`}>
-        <h2 className={`text-3xl font-bold text-sky-800`}>Upcoming Event</h2>
-        <p className={`pt-8`}>Event Description / Speaker Prof</p>
-        <Button asChild variant="ghost" className="gap-1">
-          <Link href="/">
-            Learn more <ArrowRightIcon className="h-4 w-4" />
+        <h2 className={`text-4xl font-bold text-sky-800 `}>Upcoming Event</h2>
+        <p className={`text-2xl font-bold text-sky-800 pt-4`}>
+          Event Description
+        </p>
+        <p
+          className={`text-xl text-muted-foreground pt-2 text-justify pr-4 pb-4`}
+        >
+          Emerging technologies in robotics and artificial intelligence are
+          rapidly reshaping industries and daily life. From intelligent
+          automation to immersive augmented reality, recent advancements are
+          revolutionizing how we work, learn, and interact. This seminar aims to
+          explore cutting-edge developments in AI-powered robotics, intelligent
+          systems, and automation that are enhancing efficiency across
+          healthcare, education, manufacturing, and beyond. Join us as we bring
+          together experts and enthusiasts to delve into the future landscape of
+          robotics and AI—examining their potential, challenges, and the
+          innovations leading the way toward a smarter tomorrow.
+        </p>
+        <Button asChild variant="link" className="p-4 bg-sky-900">
+          <Link href="/" className={`text-white`}>
+            Register Now <ArrowRightIcon className="h-4 w-4" />
           </Link>
         </Button>
       </div>
